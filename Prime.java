@@ -3,7 +3,7 @@ import java.util.*;
 class Prime{
 	public static void main(String[] args) {
 		Scanner scan = new Scanner(System.in);
-
+		System.out.println("Enter the number");
 		int num = scan.nextInt();
 
 		boolean[] arr = new boolean[num + 1];
