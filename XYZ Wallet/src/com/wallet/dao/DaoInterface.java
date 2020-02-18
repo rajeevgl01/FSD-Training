@@ -1,19 +1,20 @@
 package com.wallet.dao;
 
-import java.sql.Connection;
+import java.sql.ResultSet;
+import java.util.List;
+
+import com.wallet.bean.Bean;
 
 public interface DaoInterface {
+
 	
-	public Connection con(Connection dbCon);
-	
-	public void addAccountDetails(Connection dbCon);
-	public void updateAccountDetails(Connection dbCon);
-	public void getBalance(Connection dbCon);
-	public void depositMoney(Connection dbCon);
-	public void withdrawMoney(Connection dbCon);
-	public void transactionDetails(Connection dbCon);
-	public void fundTransfer(Connection dbCon);
+	public int addAccountDetails(Bean b);
+	public int updatePhoneNumber(Bean b);
+	public int updateName(Bean b);
+	public ResultSet getBalance(Bean b);
+	public int depositMoney(Bean b);
+	public int withdrawMoney(Bean b);
+	public List<Bean> transactionDetails(Bean b);
 	
 	public String getCurrentTime();
-	
 }

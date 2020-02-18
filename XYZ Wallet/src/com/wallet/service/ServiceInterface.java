@@ -1,10 +1,17 @@
 package com.wallet.service;
 
-import java.sql.Connection;
+import java.sql.ResultSet;
+import java.util.List;
 
-import com.wallet.dao.ConnectionClass;
+import com.wallet.bean.Bean;
 
 public interface ServiceInterface {
-	public static final Connection dbCon = null;
-	public void serviceMethod();
+	public int InsertServe(Bean b);
+	public int UpdatePhoneServe(Bean b);
+	public int UpdateNameServe(Bean b);
+	public ResultSet BalanceServe(Bean b);
+	public int DepositServe(Bean b);
+	public int WithdrawServe(Bean b);
+	public List<Bean> TransactServe(Bean b);
+	
 }
