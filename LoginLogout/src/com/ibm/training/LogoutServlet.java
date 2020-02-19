@@ -21,8 +21,9 @@ public class LogoutServlet extends HttpServlet {
 		if(request.getSession(false) != null) {
 			response.setContentType("text/html");
 			HttpSession session = request.getSession();
-			request.getRequestDispatcher("link.html").include(request, response);	
-			out.print("You are successfully logged out!");
+			request.getRequestDispatcher("index2.html").include(request, response);	
+			out.print("<br>" + "You are successfully logged out!" + "<br>");
+			out.println("Session has ended.");
 //			session.invalidate();
 			response.setHeader("Cache-Control", "no-cache");
 
@@ -43,3 +44,4 @@ public class LogoutServlet extends HttpServlet {
 	
 
 }
+
