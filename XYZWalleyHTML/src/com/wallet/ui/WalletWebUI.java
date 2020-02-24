@@ -32,6 +32,11 @@ public class WalletWebUI extends HttpServlet {
 			RequestDispatcher dispatcher = request.getRequestDispatcher("Login.html");
 			dispatcher.include(request, response);
 		}
+		else {
+			out.println("wrong password!!");
+			RequestDispatcher dispatcher = request.getRequestDispatcher("Index.html");
+			dispatcher.include(request, response);
+		}
 	}
 
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
